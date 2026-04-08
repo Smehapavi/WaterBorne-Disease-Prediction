@@ -6,3 +6,4 @@ seaborn
 scipy
 xgboost
 prophet
+plotly
