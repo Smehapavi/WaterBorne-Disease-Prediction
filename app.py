@@ -66,7 +66,7 @@ if st.button("Predict Outbreak Risk"):
     
 
     import requests
-    requests.get(f"http://127.0.0.1:5000/update/{int(d*100)}/{int(c*100)}/{int(t*100)}")
+    requests.get(f"https://waterborne-disease-prediction.onrender.com/update/{int(d*100)}/{int(c*100)}/{int(t*100)}")
 
     # ----------------------------
     # Risk Display
