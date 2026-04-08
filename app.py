@@ -63,6 +63,10 @@ if st.button("Predict Outbreak Risk"):
     d = probs[0][0][1]
     c = probs[1][0][1]
     t = probs[2][0][1]
+    
+
+    import requests
+    requests.get(f"http://127.0.0.1:5000/update/{int(d*100)}/{int(c*100)}/{int(t*100)}")
 
     # ----------------------------
     # Risk Display
@@ -121,7 +125,3 @@ if st.button("Predict Outbreak Risk"):
 
     if contaminant > 3:
         st.write("⚠ Elevated contaminant concentration detected.")
-
-import requests
-
-requests.get(f"http://127.0.0.1:5000/update/{int(d*100)}/{int(c*100)}/{int(t*100)}")
